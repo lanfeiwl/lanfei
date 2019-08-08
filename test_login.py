@@ -12,6 +12,7 @@ class LoginTest(unittest.TestCase):
         self.driver.switch_to.frame(self.driver.find_element_by_xpath("//iframe[starts-with(@id, 'x-URS-iframe')]"))
         self.driver.find_element_by_css_selector("[name='email']").send_keys(username)
         self.driver.find_element_by_xpath("//input[@name='password']").send_keys(pwd)
+        print(1)
         self.driver.find_element_by_id("dologin").click()
     def tearDown(self):
         self.driver.quit()
